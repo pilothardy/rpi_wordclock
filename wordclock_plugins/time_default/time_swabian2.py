@@ -6,33 +6,33 @@ class time_swabian2:
     """
 
     def __init__(self):
-        self.prefix = range(0,2) +  range(3,6)
+        self.prefix = range(0,2) +  range(3,7)
         self.minutes=[[], \
-            range(7,11) + range(40,44), \
-            range(11,15) + range(40,44), \
-            range(26,33), \
-            range(11,15) + range(33,36) + range(44,48), \
-            range(7,11) + range(33,36) + range(44,48), \
+            range(29,33) + range(33,37), \
+            range(22,26) + range(33,37), \
+            range(15,21), \
+            range(22,26) + range(41,44) + range(44,48), \
+            range(29,33) + range(41,44) + range(44,48), \
             range(44,48), \
-            range(7,11) + range(40,44) + range(44,48), \
-            range(15,22) + range(33,36), \
-            range(22,33), \
-            range(11,15) + range(33,36), \
-            range(7,11) + range(33,36) ]
-        self.hours= [range(94,99), \
-            range(55,58), \
-            range(62,66), \
-            range(66,70), \
-            range(73,77), \
-            range(51,55), \
+            range(29,33) + range(33,37) + range(44,48), \
+            range(22,26) + range(33,37), \
+            range(11,21), \
+            range(22,26) + range(41,44), \
+            range(29,33) + range(41,44) ]
+        self.hours= [range(82,88), \
+            range(55,59), \
+            range(66,71), \
             range(77,82), \
-            range(88,94), \
-            range(84,88), \
-            range(102,106), \
-            range(99,103), \
-            range(49,52), \
-            range(94,99)]
-        self.full_hour= range(107,110)
+            range(105,110), \
+            range(49,54), \
+            range(57,63), \
+            range(99,105), \
+            range(71,76), \
+            range(91,96), \
+            range(88,93), \
+            range(62,66), \
+            range(82,88)]
+       # self.full_hour= range(107,110)
 
     def get_time(self, time, purist):
         hour=time.hour%12+(1 if time.minute/5 > 2 else 0)
